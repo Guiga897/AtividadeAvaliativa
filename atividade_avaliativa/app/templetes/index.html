@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monitoramento Ambiental</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Monitoramento em Tempo Real</h1>
+        <div class="cards">
+            <div class="card">
+                <h2>Temperatura</h2>
+                <p id="temperature">--</p>
+            </div>
+            <div class="card">
+                <h2>Umidade</h2>
+                <p id="humidity">--</p>
+            </div>
+            <div class="card">
+                <h2>Presença</h2>
+                <p id="presence">--</p>
+            </div>
+            <div class="card">
+                <h2>Tensão Elétrica</h2>
+                <p id="voltage">--</p>
+            </div>
+        </div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
